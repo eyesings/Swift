@@ -40,10 +40,23 @@ struct ContentView: View {
                     .offset(y: -400)
                 
                 SearchView(searchTerm: self.$stockListVM.searchTerm)
-                    .offset(y: -350)
+                    .offset(y: -300)
                 
                 StockListView(stocks: fillteredStocks)
                     .offset(y: 150)
+                
+                NewArticleView(newArticles: self.stockListVM.news, onDragBegin: { (value) in
+                    self.stockListVM.dragOffset = value.translation
+                }, onDragEnd: { (value) in
+                    
+                    if value.translation.height < 0 {
+                        self.stockListVM.dragOffset = CGSize(width: 0, height: 100)
+                    } else {
+                        self.stockListVM.dragOffset = CGSize(width: 0, height: 650)
+                    }
+                    
+                }).animation(.spring())
+                .offset(y: self.stockListVM.dragOffset.height)
                 
             }
             
