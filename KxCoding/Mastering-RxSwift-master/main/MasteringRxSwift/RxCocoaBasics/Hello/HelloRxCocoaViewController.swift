@@ -1,0 +1,39 @@
+//
+//  HelloRxCocoaViewController.swift
+//  MasteringRxSwift
+//
+//  Created by Keun young Kim on 26/08/2019.
+//  Copyright © 2019 Keun young Kim. All rights reserved.
+//
+
+import UIKit
+import RxSwift
+import RxCocoa
+
+class HelloRxCocoaViewController: UIViewController {
+   
+   let bag = DisposeBag()
+   
+   @IBOutlet weak var valueLabel: UILabel!
+    
+    @IBOutlet weak var anotherLabel: UILabel!
+    
+   
+   @IBOutlet weak var tapButton: UIButton!
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
+    tapButton.rx.tap
+        .map { "Hello, RxCocoa"}
+        .bind(to: valueLabel.rx.text)
+        .disposed(by: bag)
+    
+    tapButton.rx.tap
+        .map { "RX is easy"}
+        .bind(to: anotherLabel.rx.text)
+        .disposed(by: bag)
+    
+    tapButton.rx.attributedTitle(for: .highlighted)
+   }
+}
