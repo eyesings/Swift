@@ -224,6 +224,7 @@
 		E0A2C89A5D74E986B59A5178 /* Pods_MasteringRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasteringRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F393AD22268E834600C2A77A /* Hash_CodingTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Hash_CodingTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F393AD23268EE1D000C2A77A /* Stack_CodingTest_기능개발.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Stack_CodingTest_기능개발.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F399DF2C2695167E00BAF172 /* Stack_CodingTest_프린터.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Stack_CodingTest_프린터.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +253,7 @@
 				AA01CE2322E33F060002BB18 /* Hello.playground */,
 				F393AD22268E834600C2A77A /* Hash_CodingTest.playground */,
 				F393AD23268EE1D000C2A77A /* Stack_CodingTest_기능개발.playground */,
+				F399DF2C2695167E00BAF172 /* Stack_CodingTest_프린터.playground */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
